@@ -19,7 +19,7 @@
     ],
     "support": {
         "issues": "http://git.uzcloud.uz/aripdjanov/language-class/issues",
-        "source": "http://git.uzcloud.uz/aripdjanov/language-class"
+        "source": "http://github.com/abdualiym/language-class"
     },
     "require": {
         "yiisoft/yii2": "~2.0"
