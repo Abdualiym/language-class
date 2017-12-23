@@ -29,12 +29,7 @@
     },
     "autoload": {
         "psr-4": {
-            "aripdjanov\\languageClass\\": ""
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "aripdjanov\\languageClass\\tests\\": "tests/"
+            "abdualiym\\languageClass\\": ""
         }
     },
     "config": {
