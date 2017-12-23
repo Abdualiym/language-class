@@ -21,7 +21,6 @@
         "issues": "http://git.uzcloud.uz/aripdjanov/language-class/issues",
         "source": "http://git.uzcloud.uz/aripdjanov/language-class"
     },
-    "minimum-stability": "stable",
     "require": {
         "php": ">=7.0",
         "yiisoft/yii2": "~2.0.6"
