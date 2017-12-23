@@ -31,7 +31,7 @@
     },
     "autoload": {
         "psr-4": {
-            "aripdjanov\\languageClass\\": "src/"
+            "aripdjanov\\languageClass\\": ""
         }
     },
     "autoload-dev": {
