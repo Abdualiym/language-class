@@ -1,32 +1,6 @@
 {
     "name": "abdualiym/yii2-language-class",
     "description": "Yii 2 language table emulator class",
-    "keywords": [
-        "yii2",
-        "framework",
-        "advanced",
-        "language"
-    ],
-    "homepage": "http://www.infosystems.uz/",
-    "type": "project",
-    "license": "BSD-3-Clause",
-    "authors": [
-        {
-            "name": "Ziyodilla Mirhanov",
-            "email": "ziyat@infosystems.uz",
-            "homepage": "http://infosystems.uz"
-        }
-    ],
-    "support": {
-        "issues": "http://git.uzcloud.uz/aripdjanov/language-class/issues",
-        "source": "http://github.com/abdualiym/language-class"
-    },
-    "require": {
-        "yiisoft/yii2": "~2.0"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "4.*"
-    },
     "autoload": {
         "psr-4": {
             "abdualiym\\languageClass\\": ""
