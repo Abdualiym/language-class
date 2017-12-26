@@ -1,6 +1,6 @@
 {
     "name": "abdualiym/yii2-language-class",
-    "description": "Yii 2 language table emulator class",
+    "description": "Yii2 language table emulator class",
     "autoload": {
         "psr-4": {
             "abdualiym\\languageClass\\": ""
