@@ -1,6 +1,6 @@
 <?php
 
-namespace aripdjanov\languageClass;
+namespace abdualiym\languageClass;
 
 class Language
 {
