@@ -50,4 +50,13 @@ class Language
             ],
         ];
     }
+
+    public static function langIds() : array
+    {
+        $langList = self::langList();
+        foreach ($langList as $lang){
+            $ids[] = $lang['id'];
+        }
+        return $ids;
+    }
 }
