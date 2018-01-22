@@ -4,7 +4,7 @@ namespace abdualiym\languageClass;
 
 class Language
 {
-    public static function getLangByPrefix(string $prefix) : array
+    public static function getLangByPrefix($prefix)
     {
         $langList = self::langList();
         for ($i = 0; $i < count($langList); $i++) {
@@ -14,7 +14,7 @@ class Language
         }
     }
 
-    public static function getPrefixesLangForCodemix() : array
+    public static function getPrefixesLangForCodemix()
     {
         $langList = self::langList();
         $langPrefixes = array();
@@ -25,9 +25,9 @@ class Language
     }
 
 
-    public static function langList() : array
+    public static function langList($languages = null)
     {
-        return [
+        $list = [
             [
                 'id' => '1',
                 'prefix' => 'en',
@@ -49,12 +49,25 @@ class Language
                 'title' => 'Ўзбекча'
             ],
         ];
+        if ($languages === null) {
+            return $list;
+        }
+
+        $lang = array();
+        for ($i = 0; $i < count($list); $i++) {
+            for ($j = 0; $j < count($languages); $j++) {
+                if ($list[$i]['prefix'] == $languages[$j]) {
+                    $lang[] = $list[$i];
+                }
+            }
+        }
+        return $lang;
     }
 
-    public static function langIds() : array
+    public static function langIds()
     {
         $langList = self::langList();
-        foreach ($langList as $lang){
+        foreach ($langList as $lang) {
             $ids[] = $lang['id'];
         }
         return $ids;
