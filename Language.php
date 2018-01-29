@@ -40,12 +40,12 @@ class Language
             ],
             [
                 'id' => '3',
-                'prefix' => 'oz',
+                'prefix' => 'uz',
                 'title' => 'O`zbekcha'
             ],
             [
                 'id' => '4',
-                'prefix' => 'uz',
+                'prefix' => 'oz',
                 'title' => 'Ўзбекча'
             ],
         ];
