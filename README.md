@@ -7,5 +7,5 @@ The extension allows emulate language table.
 Install with composer:
 
 ```bash
-composer require aripdjanov/language-class
+composer require abdualiym/language-class
 ```
