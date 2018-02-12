@@ -2,7 +2,10 @@
 
 namespace abdualiym\languageClass;
 
-class Language
+use yii\base\Model;
+use yii\helpers\ArrayHelper;
+
+class Language extends Model
 {
     public static function getLangByPrefix($prefix)
     {
@@ -25,9 +28,38 @@ class Language
     }
 
 
-    public static function langList($languages = null)
+    public static function langList($languages = null, $indexById = false)
     {
-        $list = [
+        $list = self::getLanguagesArray();
+
+        if (!$languages) {
+            return $list;
+        }
+
+        $lang = array();
+        for ($i = 0; $i < count($list); $i++) {
+            for ($j = 0; $j < count($languages); $j++) {
+                if ($list[$i]['prefix'] == $languages[$j]) {
+                    $lang[] = $list[$i];
+                }
+            }
+        }
+
+        return $indexById ? ArrayHelper::index($lang, 'id') : $lang;
+    }
+
+    public static function langIds()
+    {
+        $langList = self::langList();
+        foreach ($langList as $lang) {
+            $ids[] = $lang['id'];
+        }
+        return $ids;
+    }
+
+    private function getLanguagesArray()
+    {
+        return [
             [
                 'id' => '1',
                 'prefix' => 'en',
@@ -49,27 +81,5 @@ class Language
                 'title' => 'Ўзбекча'
             ],
         ];
-        if ($languages === null) {
-            return $list;
-        }
-
-        $lang = array();
-        for ($i = 0; $i < count($list); $i++) {
-            for ($j = 0; $j < count($languages); $j++) {
-                if ($list[$i]['prefix'] == $languages[$j]) {
-                    $lang[] = $list[$i];
-                }
-            }
-        }
-        return $lang;
-    }
-
-    public static function langIds()
-    {
-        $langList = self::langList();
-        foreach ($langList as $lang) {
-            $ids[] = $lang['id'];
-        }
-        return $ids;
     }
 }
