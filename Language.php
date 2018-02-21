@@ -4,6 +4,7 @@ namespace abdualiym\languageClass;
 
 use yii\base\Model;
 use yii\helpers\ArrayHelper;
+use yii\helpers\VarDumper;
 
 class Language extends Model
 {
@@ -55,6 +56,42 @@ class Language extends Model
             $ids[] = $lang['id'];
         }
         return $ids;
+    }
+
+    public static function contentExist($id){
+        $list = self::langList(self::getPrefixesLangForCodemix(),true);
+
+        foreach ($list as $key => $l){
+            if(\Yii::$app->language == $l['prefix']){
+                return (self::getTranslateArray())[$l['id']][$id];
+            }
+        }
+
+
+    }
+    private function getTranslateArray(){
+        return [
+            2 => [
+                1 => ' английский',
+                3 => ' узбекский латиница',
+                4 => ' узбекский кирилица',
+
+            ],
+            3 => [
+                1 => ' ingliz tilida',
+                2 => ' rus tilida',
+                4 => ' kiril o`zbekchada',
+
+            ],
+
+            4 => [
+                1 => ' инглиз тилида',
+                2 => ' рус тилида',
+                3 => ' лотин ўзбекчада',
+
+            ]
+
+        ];
     }
 
     private function getLanguagesArray()
